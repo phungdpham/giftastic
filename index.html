@@ -9,22 +9,17 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
     <!--Create a division to view animals that are added-->
-    <div class="row" id="animal-view"></div>
+    <div class="jumbotron" id="animal-view"></div>
     <!--Form for user to add animal-->
-    <div class="row">
-        <div class="col-md-6" id="animal-images"></div>
-        <div class="col-md-6">
-            <form id="animal-form">
-                <label for="animal-input">Add an animal</label><br>
-                <input type ="text" id="animal-input"><br>
-                <!--Add a button to triggers new animal to be added-->
-                <input id="add-animal" type="submit" value="Add a animal">
-            </form>
-        </div>
-    </div>
-
+    <form class="float-md-right" id="animal-form" style="width: 15%">
+        <label for="animal-input">Add an animal name</label><br>
+        <input type ="text" id="animal-input">
+        <!--Add a button to triggers new animal to be added-->
+        <input id="add-animal" type="submit" value="Add">
+    </form>
+    <div id="animal-images" style="width:85%"></div>
 </div>
 
 
@@ -38,3 +33,9 @@
 
 </body>
 </html>
+
+<!--
+            animalImage.attr("data-still", results[i].images.fixed_height_still.url);
+            animalImage.attr("data-animate", results[i].images.fixed_height.url);
+            animalImage.attr("data-state", "still");
+-->
